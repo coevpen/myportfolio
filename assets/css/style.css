@@ -72,3 +72,35 @@ header h1 {
     font-weight: bold;
 }
 
+.flex-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.flex-content section{
+
+}
+
+
+.flex-content h2 {
+    padding-right: 10px;
+    border-right: 2px solid var(--tertiary-color);
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.about-title {
+    height: 100px;
+    margin-left: 14px;
+}
+
+.work-title {
+    height: 500px;
+    margin-left: 25px;
+}
+
+.contact-title {
+    height: 100px;
+}
