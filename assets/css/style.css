@@ -2,6 +2,7 @@
     --primary-color: white;
     --secondary-color: rgba(140, 100, 214, 0.938);
     --tertiary-color: rgba(127, 96, 215, 0.938);
+    --small-screen-font-size: 24px;
 }
 
 * {
@@ -17,8 +18,6 @@ a {
     color: var(--secondary-color);
     text-decoration: none;
 }
-
-
 
 .hero {
     background-image: url('../images/herojpg.jpg');
@@ -74,35 +73,41 @@ header h1 {
 
 }
 
-.flex-content{
+.flex-row {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
 }
 
-.flex-content h2 {
+.flex-row h2 {
+    text-align: right;
     padding-right: 10px;
     border-right: 2px solid var(--tertiary-color);
-    float: left;
-    text-align: right;
     margin-right: 10px;
-}
-
-.flex-content section, address {
-    margin: 20px 0 20px 0;
 }
 
 .work {
     height: auto;
 }
 
+.work-images {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100px;
+}
+
+
 .work-images img {
     height: 300px;
-    margin: 20px 0 0 100px;
+    width: 700px;
+    opacity: 0.6;
 }
 
 .image {
-   
+    border: 2px solid  var(--primary-color);
+    margin: 20px 20px 20px 20px;
+}
+
+.image img:hover {
+    opacity: 1;
 }
 
 .contact a {
@@ -122,4 +127,69 @@ header h1 {
 
 .contact-title {
     height: 100px;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+   
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+    
+    footer h2, footer div P{
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .image {
+        flex: 0 70%;
+    }
+   
+    .work-images img {
+        opacity: 1;
+    }
+
+    .nav li {
+        font-size: var(--small-screen-font-size);
+    }
+
+    h2 {
+        font-size: var(--small-screen-font-size);
+        border: none;
+    }
+
+    .contact a {
+        font-size: var(--small-screen-font-size);
+    } 
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+   
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    
 }
