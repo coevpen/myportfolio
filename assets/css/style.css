@@ -55,7 +55,7 @@ header h1 {
 
 .nav{
     display: flex;
-    list-style-type: none;
+    list-style: none;
     flex-wrap: wrap;
 }
 
@@ -110,6 +110,10 @@ header h1 {
     opacity: 1;
 }
 
+.contact-title {
+    height: 100px;
+}
+
 .contact a {
     font-size: 25px;
     margin: 100px 100px 0 100px;
@@ -125,14 +129,13 @@ header h1 {
     margin-left: 25px;
 }
 
-.contact-title {
-    height: 100px;
-}
+
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
    
     header {
+        margin-left: 42px;
         padding-bottom: 0;
         justify-content: center;
         position: relative;
@@ -140,22 +143,22 @@ header h1 {
 
     header h1 {
         width: 100%;
+        height: 100%;
         text-align: center;
     }
 
-    header nav ul {
+    .nav {
         margin-top: 20px;
         width: 100%;
         justify-content: center;
     }
 
-    header nav ul li a {
+    .nav li a {
         font-size: 20px;
     }
-    
-    footer h2, footer div P{
-        text-align: center;
-        width: 100%;
+
+    .nav li {
+        font-size: var(--small-screen-font-size);
     }
 
     .hero {
@@ -163,33 +166,48 @@ header h1 {
     }
 
     .image {
-        flex: 0 70%;
+        flex: 0 100%;
     }
    
     .work-images img {
         opacity: 1;
-    }
-
-    .nav li {
-        font-size: var(--small-screen-font-size);
+        height: 160px;
+        width: 250px;
+        background-size: cover;
     }
 
     h2 {
         font-size: var(--small-screen-font-size);
         border: none;
     }
+        
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
 
     .contact a {
         font-size: var(--small-screen-font-size);
+        margin-left: 43px;
     } 
+
+
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
+    section {
+        padding: 20px 20px;
+    }
    
+    .contact a {
+        margin: 90px;
+    }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-    
+    .contact a {
+        margin: 65px;
+    }
 }
