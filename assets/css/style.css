@@ -21,20 +21,21 @@ a {
 
 .hero {
     background-image: url('../images/herojpg.jpg');
-    height: 148px;
+    height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: left;
     position: relative;
 }
 
 .tagline {
     display: flex;
     flex: wrap;
-    justify-content: right;
+    justify-content: center;
     padding-right: 10px;
     padding-block: 60px;
     font-size: 30px;
     color: var(--primary-color);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
 header {
@@ -50,6 +51,7 @@ header h1 {
     margin: 0;
     padding: 0 10px 0 4px;
     background-color: var(--tertiary-color);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
 
@@ -85,7 +87,9 @@ header h1 {
 }
 
 .about-me p{
-    text-align: left;
+    text-align: center;
+    padding-left: 5%;
+    width: 70%;
 }
 
 .work {
@@ -135,8 +139,7 @@ header h1 {
 
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
- * { outline: 1px red solid !important; visibility: visible !important } 
+@media screen and (max-width: 980px) { 
     header {
         padding-bottom: 0;
     }
@@ -165,14 +168,11 @@ header h1 {
     }
 
     .hero {
-        background-image: url('../images/herojpgmobile.jpg');
         width: 100%;
-        justify-self: right;
     }
-    
+
     .tagline {
-        padding-block: 120px;
-        justify-content: center;
+        justify-content: right;
     }
 
     .image {
@@ -181,8 +181,8 @@ header h1 {
    
     .work-images img {
         opacity: 1;
-        height: 150px;
-        width: 240px;
+        height: 100%;
+        width: 100%;
         background-size: cover;
     }
 
@@ -193,7 +193,7 @@ header h1 {
         
     footer h2, footer div {
         text-align: center;
-        width: 100%;
+        width: 80%;
     }
 
     .contact a {
@@ -215,6 +215,11 @@ header h1 {
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
 
+    .tagline {
+        padding-right: 0;
+        font-size: var(--small-screen-font-size);
+    }
+
     .contact a {
         margin: 90px;
     }
@@ -223,18 +228,11 @@ header h1 {
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
 
-    .work-images img {
-        opacity: 1;
-        height: 76px;
-        width: 200px;
-        background-size: cover;
-    }
-
     .nav li {
         font-size: var(--small-screen-font-size);
         text-align: center;
         margin: 0 0 0 5px;
-        padding: 2px;
+
     }
 
     .contact a {
