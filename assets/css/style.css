@@ -136,12 +136,9 @@ header h1 {
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
-   
+ * { outline: 1px red solid !important; visibility: visible !important } 
     header {
-        margin-left: 42px;
         padding-bottom: 0;
-        justify-content: center;
-        position: relative;
     }
 
     header h1 {
@@ -151,6 +148,7 @@ header h1 {
     }
 
     .nav {
+        padding-left: 0;
         margin-top: 20px;
         width: 100%;
         justify-content: center;
@@ -162,10 +160,19 @@ header h1 {
 
     .nav li {
         font-size: var(--small-screen-font-size);
+        text-align: center;
+        margin: 0 10px 0 5px;
     }
 
     .hero {
+        background-image: url('../images/herojpgmobile.jpg');
         width: 100%;
+        justify-self: right;
+    }
+    
+    .tagline {
+        padding-block: 120px;
+        justify-content: center;
     }
 
     .image {
@@ -174,8 +181,8 @@ header h1 {
    
     .work-images img {
         opacity: 1;
-        height: 160px;
-        width: 250px;
+        height: 150px;
+        width: 240px;
         background-size: cover;
     }
 
@@ -191,18 +198,23 @@ header h1 {
 
     .contact a {
         font-size: var(--small-screen-font-size);
-        margin-left: 43px;
+
     } 
+
+    .work-title, .contact-title, .about-title {
+        margin-left: 0;
+    }
+
+    .contact {
+        text-align: left;
+    }
 
 
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-    section {
-        padding: 20px 20px;
-    }
-   
+
     .contact a {
         margin: 90px;
     }
@@ -210,7 +222,22 @@ header h1 {
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+
+    .work-images img {
+        opacity: 1;
+        height: 76px;
+        width: 200px;
+        background-size: cover;
+    }
+
+    .nav li {
+        font-size: var(--small-screen-font-size);
+        text-align: center;
+        margin: 0 0 0 5px;
+        padding: 2px;
+    }
+
     .contact a {
-        margin: 65px;
+        margin: 20px;
     }
 }
