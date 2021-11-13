@@ -19,25 +19,6 @@ a {
     text-decoration: none;
 }
 
-.hero {
-    background-image: url('../images/herojpg.jpg');
-    height: 100%;
-    background-size: cover;
-    background-position: left;
-    position: relative;
-}
-
-.tagline {
-    display: flex;
-    flex: wrap;
-    justify-content: center;
-    padding-right: 10px;
-    padding-block: 60px;
-    font-size: 30px;
-    color: var(--primary-color);
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
-}
-
 header {
     display: flex;
     padding: 5px;
@@ -53,7 +34,6 @@ header h1 {
     background-color: var(--tertiary-color);
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
-
 
 .nav{
     display: flex;
@@ -75,6 +55,25 @@ header h1 {
 
 }
 
+.hero {
+    background-image: url('../images/herojpg.jpg');
+    height: 100%;
+    background-size: cover;
+    background-position: left;
+    position: relative;
+}
+
+.tagline {
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    padding-right: 10px;
+    padding-block: 60px;
+    font-size: 30px;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
 .flex-row {
     display: flex;
 }
@@ -84,6 +83,11 @@ header h1 {
     padding-right: 10px;
     border-right: 2px solid var(--tertiary-color);
     margin-right: 10px;
+}
+
+.about-title {
+    height: 100px;
+    margin-left: 14px;
 }
 
 .about-me p{
@@ -96,11 +100,15 @@ header h1 {
     height: auto;
 }
 
+.work-title {
+    height: 1000px;
+    margin-left: 25px;
+}
+
 .work-images {
     display: flex;
     flex-wrap: wrap;
 }
-
 
 .work-images img {
     height: 300px;
@@ -125,18 +133,6 @@ header h1 {
     font-size: 25px;
     margin: 100px 100px 0 100px;
 }
-
-.about-title {
-    height: 100px;
-    margin-left: 14px;
-}
-
-.work-title {
-    height: 1000px;
-    margin-left: 25px;
-}
-
-
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) { 
@@ -196,6 +192,10 @@ header h1 {
         width: 80%;
     }
 
+    .contact {
+        text-align: left;
+    }
+
     .contact a {
         font-size: var(--small-screen-font-size);
 
@@ -204,12 +204,6 @@ header h1 {
     .work-title, .contact-title, .about-title {
         margin-left: 0;
     }
-
-    .contact {
-        text-align: left;
-    }
-
-
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
