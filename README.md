@@ -11,4 +11,4 @@ This website was built to be my developer portfolio. Within, it provides a littl
 https://coevpen.github.io/myportfolio/
 
 # Screenshot
-[Screenshot of portfolio](/portfolioscreen.gif)
+![](/portfolioscreen.gif)
